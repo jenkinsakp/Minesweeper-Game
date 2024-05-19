@@ -26,13 +26,13 @@ This project is a classic implementation of the Minesweeper game using Vue 3, a 
 6. **Losing:** Accidentally detonating a mine ends the game.
 7. **Scoring:** Achieve the best time for each difficulty level to set high scores.
 
-## Installation
+<!--## Installation
 
 1. Clone the repository: `git clone https://github.com/yourusername/vue-minesweeper.git`
 2. Open the project directory: `cd vue-minesweeper`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run serve`
-5. Open your browser and navigate to `http://localhost:8080`.
+5. Open your browser and navigate to `http://localhost:8080`. -->
 
 ## Technologies Used
 
@@ -40,13 +40,13 @@ This project is a classic implementation of the Minesweeper game using Vue 3, a 
 - HTML5
 - CSS3
 - JavaScript
-
+<!--
 ## Screenshots
 
 ![Screenshot 1](/screenshots/screenshot1.png)
 ![Screenshot 2](/screenshots/screenshot2.png)
 
-
+-->
 
 ## License
 
