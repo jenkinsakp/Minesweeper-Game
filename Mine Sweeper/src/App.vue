@@ -1,40 +1,40 @@
-<script setup >
+<script setup lang="js" >
 
 </script>
 
 <template>
-  <header>
-   
-  </header>
+
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h1 class="text-3xl font-semibold text-center mb-6">Minesweeper</h1>
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <!-- Game cells with padding -->
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <input type="button" class="cell bg-gray-300 border border-gray-400 p-4" >
+        <br>
+      <div class="flex justify-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+      </div>
+    </div>
+  </div>
+
 
  
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
