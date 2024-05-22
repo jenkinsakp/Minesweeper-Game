@@ -27,6 +27,8 @@ export default {
 
   methods: {
     generateBoard() {
+      this.BoardData=[];
+      this.minsSelected=null;
       for (let i = 0; i < this.level["easy"]; i++) {
         const randomType = Math.floor(Math.random() * 2) + 1; // Generate random type (1, 2, or 3)
         const randomGroup = Math.floor(Math.random() * 3) + 1; // Generate random group (1, 2, or 3)
@@ -95,7 +97,7 @@ export default {
   </div>
       <br>
       <div class="flex justify-center">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="generateBoard()">Reset</button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
 
