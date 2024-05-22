@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       minsSelected: null,
+      selectedlLevel:12,
       level: {
         'easy': 12,
         'mid': 20,
@@ -26,10 +27,10 @@ export default {
   },
 
   methods: {
-    generateBoard() {
+    generateBoard(level) {
       this.BoardData=[];
       this.minsSelected=null;
-      for (let i = 0; i < this.level["easy"]; i++) {
+      for (let i = 0; i < level; i++) {
         const randomType = Math.floor(Math.random() * 2) + 1; // Generate random type (1, 2, or 3)
         const randomGroup = Math.floor(Math.random() * 3) + 1; // Generate random group (1, 2, or 3)
         const randomMines = Math.random() < 0.5; // Randomly assign mines property true or false
@@ -65,14 +66,15 @@ export default {
     }
   },
   computed:{
-    faild(){
-      return {'bg-green-500':board.mines, 'bg-red-500':!board.mines}
+    changedlLevel(){
+      return this.selectedlLevel
+
     }
   }
 ,
 
   mounted() {
-    this.generateBoard();
+    this.generateBoard(this.selectedlLevel);
   }
 }
 </script>
@@ -97,8 +99,8 @@ export default {
   </div>
       <br>
       <div class="flex justify-center">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="generateBoard()">Reset</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="generateBoard(this.selectedlLevel)">Reset</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"@click="this.selectedlLevel=32, generateBoard(this.selectedlLevel)">Reset</button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
 
     </div>
