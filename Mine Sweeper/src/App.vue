@@ -50,6 +50,7 @@ export default {
 
     select(index) {
       let selected = this.BoardData[index];
+      console.log(index)
       if (selected.mines) {
        this.minsSelected= this.gameOver();
       }
@@ -66,13 +67,15 @@ export default {
     }
   },
   computed:{
-    changedlLevel(){
-      return this.selectedlLevel
 
-    }
   }
 ,
+watch:{
+    selectedlLevel(newdata,olddata){
+      this.generateBoard(newdata)
+    }
 
+},
   mounted() {
     this.generateBoard(this.selectedlLevel);
   }
@@ -100,8 +103,10 @@ export default {
       <br>
       <div class="flex justify-center">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="generateBoard(this.selectedlLevel)">Reset</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"@click="this.selectedlLevel=32, generateBoard(this.selectedlLevel)">Reset</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+        <button v-for="(levels, index, key) in level" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"@click="this.selectedlLevel=levels">
+          {{ index }}</button>
+<!--        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"@click="this.selectedlLevel=32">Hard</button>-->
+<!--        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>-->
 
     </div>
   </div>
